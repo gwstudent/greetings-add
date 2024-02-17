@@ -28,6 +28,14 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: greetings-jar
+        path: build/libs
+
+
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     - name: Setup Gradle
