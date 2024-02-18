@@ -103,5 +103,5 @@ jobs:
       shell: bash
       run: | 
         chmod +x ./test-script.sh
-        ./test-script.sh ${{ github.event.inputs.myVersion }} ${{ github.event.inputs.myValues }}
+        ./test-script.sh ${{ needs.builds.outputs.artifact-path }} ${{ github.event.inputs.myValues }}
 
